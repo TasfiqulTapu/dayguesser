@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <link rel="stylesheet" href="style.css">
+    <!-- font -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Roboto+Mono&display=swap" rel="stylesheet">
+    <title>Day Guesser</title>
+    <meta name="description" content="Guess the day of the week">
+</head>
+<body>
+    <nav></nav>
+    <main>
+        <div id="mode">
+            <ul>
+                <li id="this-year-settings" onclick="setThisYear()">this year</li>
+                <li id="custom-year-settings" onclick="showCustomYear()">custom</li>
+            </ul>
+        </div>
+        <div id="custom-years">
+            <label for="year-start">Years</label>
+            <input type="number" name="year-start" id="year-start">
+            <label for="year-end">to</label>
+            <input type="number" name="year-end" id="year-end">
+            <button onclick="customYearSet()">Submit</button>
+        </div>
+        <div id="welcome">
+            <h1>Day Gusser</h1>
+            <span onclick="start()">Begin</span>
+        </div>
+
+        <div id="gussing">
+            <h1 id="date"></h1>
+            <div id="timer-wrap"><span id="timer"></span></div>
+            <div id="submit-buttons">
+                <ul>
+                    <li class="submit-day">Sunday</li><span></span>
+                    <li class="submit-day">Monday</li><span></span>
+                    <li class="submit-day">Tuesday</li><span></span>
+                    <li class="submit-day">Wednesday</li><span></span>
+                    <li class="submit-day">Thursday</li><span></span>
+                    <li class="submit-day">Friday</li><span></span>
+                    <li class="submit-day">Saturday</li>
+                </ul>
+            </div>
+            <div>
+                    <span id="retry-button" onclick="start()">Retry</span>
+            </div>
+        </div>
+
+        <div id="results">
+            <h1 id="result-header"></h1>
+            <span id="result-date"></span>
+            <div id="timer-wrap"><span id="time"></span></div>
+            <div id="action-row">
+                <ul>
+                    <li id="retry-button" onclick="start()">Retry</li>
+                </ul>
+            </div>
+        </div>
+    </main>
+
+    <script src="main.js"></script>
+
+</body>
+</html>
